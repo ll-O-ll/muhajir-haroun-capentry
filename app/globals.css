@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* Islamic/Kufic Palette */
+  --background: #F9F7F2;
+  /* Cream/Parchment */
+  --foreground: #1A1A1A;
+  /* Dark Gray for contrast */
+
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+
+  --primary: #0F4C5C;
+  /* Deep Teal/Petroleum */
+  --primary-foreground: #F9F7F2;
+
+  --secondary: #C5A059;
+  /* Gold/Brass */
+  --secondary-foreground: #1A1A1A;
+
+  --muted: #EAE6DD;
+  /* Darker cream */
+  --muted-foreground: #5C5C5C;
+
+  --accent: #C5A059;
+  /* Gold */
+  --accent-foreground: #1A1A1A;
+
+  --destructive: #9B2226;
+  /* Deep Red */
+  --destructive-foreground: #FFFFFF;
+
+  --border: #D4AF37;
+  /* Metallic Gold border */
+  --input: #EAE6DD;
+
+  /* Font Variables */
+  --font-inter: var(--font-inter);
+  --font-reem-kufi: var(--font-reem-kufi);
+  --font-amiri: var(--font-amiri);
+
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: #0A1F25;
+  /* Very Dark Teal */
+  --foreground: #F9F7F2;
+  --card: #132A32;
+  --card-foreground: #F9F7F2;
+  --popover: #132A32;
+  --popover-foreground: #F9F7F2;
+  --primary: #C5A059;
+  /* Gold becomes primary in dark mode */
+  --primary-foreground: #0A1F25;
+  --secondary: #0F4C5C;
+  --secondary-foreground: #F9F7F2;
+  --muted: #1A3C45;
+  --muted-foreground: #A0A0A0;
+  --accent: #C5A059;
+  --accent-foreground: #0A1F25;
+  --destructive: #7F1D1D;
+  --destructive-foreground: #F9F7F2;
+  --border: #3E2723;
+  /* Dark Wood */
+  --input: #1A3C45;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-reem-kufi);
+  --font-arabic: var(--font-amiri);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
