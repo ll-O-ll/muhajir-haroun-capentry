@@ -3,6 +3,7 @@
 import { useLanguage } from "@/app/contexts/LanguageContext"
 import { ServiceCard } from "@/components/ServiceCard"
 import { ProjectCard } from "@/components/ProjectCard"
+import { CarouselProjectCard } from "@/components/CarouselProjectCard"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Hammer, Ruler, Pencil, HardHat, Truck, Home, Instagram } from "lucide-react"
@@ -127,20 +128,13 @@ export default function LandingPage() {
               category="Accessories"
               imageSrc="/images/book-stand.jpg"
             />
-            <ProjectCard
-              title="Modern Wardrobe I"
+            <CarouselProjectCard
+              title="Modern Wardrobe"
               category="Custom Furniture"
-              imageSrc="/images/wardrobe/wardrobe-book-cabinet-1.jpg"
-            />
-            <ProjectCard
-              title="Modern Wardrobe II"
-              category="Custom Interior"
-              imageSrc="/images/wardrobe/wardrobe-book-cabinet-2.jpg"
-            />
-            <ProjectCard
-              title="Book Cabinet Detail"
-              category="Woodwork Details"
-              imageSrc="/images/wardrobe/wardrobe-book-cabinet-3.jpg"
+              images={[
+                "/images/wardrobe/muhajir-cabinet-2.PNG",
+                "/images/wardrobe/wardrobe-book-cabinet-3.jpg",
+              ]}
             />
           </div>
         </div>
