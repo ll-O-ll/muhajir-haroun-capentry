@@ -17,7 +17,7 @@ export const translations = {
       title: 'Services',
       do_it: {
         title: 'DO IT',
-        desc: 'Online Shop - Minor projects and products available for purchase.',
+        desc: 'Online Shop - Coming Soon.',
       },
       cut_it: {
         title: 'CUT IT',

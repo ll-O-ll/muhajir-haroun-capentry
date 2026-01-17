@@ -1,16 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface ServiceCardProps {
     title: string;
     description: string;
     className?: string;
     titleClassName?: string;
+    href?: string;
 }
 
-export function ServiceCard({ title, description, className, titleClassName }: ServiceCardProps) {
-    return (
-        <Card className={cn("bg-card border-none shadow-none rounded-none p-6 md:p-10 transition-all hover:bg-muted/50", className)}>
+export function ServiceCard({ title, description, className, titleClassName, href }: ServiceCardProps) {
+    const content = (
+        <Card className={cn("bg-card border-none shadow-none rounded-none p-6 md:p-10 transition-all hover:bg-muted/50 h-full", className)}>
             <CardHeader className="p-0 mb-4">
                 <CardTitle className={cn("text-3xl md:text-5xl font-black uppercase tracking-tighter", titleClassName)}>
                     {title}
@@ -23,4 +25,14 @@ export function ServiceCard({ title, description, className, titleClassName }: S
             </CardContent>
         </Card>
     );
+
+    if (href) {
+        return (
+            <Link href={href} className="block h-full group">
+                {content}
+            </Link>
+        );
+    }
+
+    return content;
 }

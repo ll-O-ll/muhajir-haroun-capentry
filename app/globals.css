@@ -44,6 +44,8 @@
 
   /* Font Variables */
   --font-inter: var(--font-inter);
+  --font-garamond: var(--font-garamond);
+  --font-playfair: var(--font-playfair);
   --font-reem-kufi: var(--font-reem-kufi);
   --font-amiri: var(--font-amiri);
 
@@ -76,7 +78,9 @@
 
 @theme inline {
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-reem-kufi);
+  --font-serif: var(--font-garamond);
+  --font-heading: var(--font-playfair);
+  --font-kufi: var(--font-reem-kufi);
   --font-arabic: var(--font-amiri);
 
   --color-background: var(--background);

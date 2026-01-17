@@ -44,7 +44,7 @@ export function CarouselProjectCard({ title, category, images, className }: Caro
                     </div>
                 </Carousel>
 
-                <div className="space-y-1">
+                <div className="space-y-1 px-1">
                     <div className="text-xs font-sans uppercase tracking-widest text-muted-foreground">
                         {category}
                     </div>

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Hammer, Ruler, Pencil, HardHat, Truck, Home, Instagram } from "lucide-react"
 import { IslamicPattern } from "@/components/IslamicPattern"
+import { FeedbackForm } from "@/components/FeedbackForm"
 
 export default function LandingPage() {
   const { t, dir } = useLanguage()
@@ -61,14 +62,17 @@ export default function LandingPage() {
             <ServiceCard
               title={t.services.cut_it.title}
               description={t.services.cut_it.desc}
+              href="#products"
             />
             <ServiceCard
               title={t.services.hang_it.title}
               description={t.services.hang_it.desc}
+              href="#products"
             />
             <ServiceCard
               title={t.services.collab.title}
               description={t.services.collab.desc}
+              href="#products"
             />
           </div>
         </div>
@@ -111,32 +115,43 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-6xl font-heading font-bold uppercase tracking-tight text-foreground">
               Selected Work
             </h2>
-            <Link href="#" className="flex items-center gap-2 group text-secondary hover:text-primary transition-colors">
-              <span className="uppercase tracking-widest text-sm font-bold">View Full Portfolio</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProjectCard
-              title="Guitar Shelf"
-              category="Custom Furniture"
-              imageSrc="/images/guitar-shelf.jpg"
-            />
-            <ProjectCard
-              title="Book Stand"
-              category="Accessories"
-              imageSrc="/images/book-stand.jpg"
+            <CarouselProjectCard
+              title="Concept Sketches"
+              category="Design & Process"
+              images={[
+                "/images/sketches/sketch-1.PNG",
+                "/images/sketches/sketch-2.PNG",
+                "/images/sketches/sketch-3.PNG",
+                "/images/sketches/sketch-4.PNG",
+              ]}
             />
             <CarouselProjectCard
               title="Modern Wardrobe"
-              category="Custom Furniture"
+              category="Custom Furniture Kufic Design"
               images={[
                 "/images/wardrobe/muhajir-cabinet-2.PNG",
                 "/images/wardrobe/wardrobe-book-cabinet-3.jpg",
               ]}
             />
+            <CarouselProjectCard
+              title="Creative Designed Objects"
+              category="Moodboards"
+              images={[
+                "/images/creative-objects/moodboard-1.PNG",
+                "/images/creative-objects/moodboard-2.PNG",
+              ]}
+            />
           </div>
+        </div>
+      </section>
+      {/* Feedback Section */}
+      <section className="py-24 px-4 bg-muted/20 relative">
+        <IslamicPattern className="opacity-[0.02]" />
+        <div className="max-w-7xl mx-auto relative z-10">
+          <FeedbackForm />
         </div>
       </section>
 

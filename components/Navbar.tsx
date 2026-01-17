@@ -18,7 +18,6 @@ export function Navbar() {
     const navItems = [
         { label: t.nav.mission, href: '/#mission' },
         { label: t.nav.services, href: '/#services' },
-        { label: 'Projects', href: '/projects' },
         { label: t.nav.products, href: '#products' },
         { label: t.nav.contact, href: '#contact' },
     ];
