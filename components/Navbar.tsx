@@ -7,7 +7,7 @@ import { useLanguage } from '@/app/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import Image from "next/image";
 
@@ -70,14 +70,15 @@ export function Navbar() {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                                 <div className="flex flex-col gap-8 mt-10">
-                                    <div className="flex flex-col gap-4">
+                                    <div className="flex flex-col gap-6 items-center">
                                         {navItems.map((item) => (
                                             <Link
                                                 key={item.href}
                                                 href={item.href}
                                                 onClick={() => setIsOpen(false)}
-                                                className="text-lg font-medium hover:text-muted-foreground transition-colors uppercase tracking-widest text-right"
+                                                className="text-lg font-medium hover:text-muted-foreground transition-colors uppercase tracking-widest text-center"
                                             >
                                                 {item.label}
                                             </Link>
