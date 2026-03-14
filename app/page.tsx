@@ -1,183 +1,130 @@
 "use client"
 
 import { useLanguage } from "@/app/contexts/LanguageContext"
-import { ServiceCard } from "@/components/ServiceCard"
-import { ProjectCard } from "@/components/ProjectCard"
-import { CarouselProjectCard } from "@/components/CarouselProjectCard"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight, Hammer, Ruler, Pencil, HardHat, Truck, Home, Instagram } from "lucide-react"
-import { IslamicPattern } from "@/components/IslamicPattern"
-import { FeedbackForm } from "@/components/FeedbackForm"
+import Image from "next/image"
+import DesignSpaceContents from "@/components/DesignSpaceContents"
+import DesignObjectsContents from "@/components/DesignObjectsContents"
+import ContactForm from "@/components/ContactForm"
 
 export default function LandingPage() {
-  const { t, dir } = useLanguage()
-
-  const processIcons = [
-    Home, // On Site
-    Pencil, // Planning
-    Ruler, // AutoCAD
-    Hammer, // Production
-    Truck, // Delivery
-    HardHat // Mounting
-  ];
+  const { dir } = useLanguage()
 
   return (
-    <div dir={dir} className="min-h-screen bg-background text-foreground font-sans selection:bg-secondary selection:text-secondary-foreground">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
-        <IslamicPattern className="opacity-[0.03] text-primary" />
-        <div className="z-10 text-center max-w-5xl mx-auto space-y-8">
-          <div className="relative inline-block">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight uppercase leading-[0.9] text-primary dark:text-secondary">
-              {t.hero.title}
-            </h1>
-            {/* Decorative Elements around Title */}
-            <div className="absolute -top-6 -left-6 w-12 h-12 border-t-4 border-l-4 border-secondary/50 hidden md:block" />
-            <div className="absolute -bottom-6 -right-6 w-12 h-12 border-b-4 border-r-4 border-secondary/50 hidden md:block" />
-          </div>
-
-          <p className="text-xl md:text-3xl font-light text-muted-foreground tracking-wide font-heading">
-            {t.hero.subtitle}
+    <div dir={dir} className="min-h-screen bg-background text-foreground font-sans selection:bg-secondary selection:text-secondary-foreground pt-32 pb-24">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+        {/* Intro Text Section */}
+        <section className="max-w-3xl mx-auto space-y-8 text-center md:text-left mt-16 md:mt-24">
+          <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif">
+            Als Tischler und Raumgestalter im Reisegewerbe sind wir ständig unterwegs, möchten jedoch jederzeit für unsere Kunden erreichbar bleiben. Deshalb präsentieren wir uns auf dieser Website, die auch Interessierten einen Einblick in die Qualität unserer Arbeit bietet.
           </p>
-          <div className="pt-12">
-            <Button asChild size="lg" className="rounded-none px-10 h-14 text-xl uppercase tracking-wider font-heading bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 border border-transparent hover:border-secondary">
-              <Link href="#services">
-                {t.hero.cta}
-              </Link>
-            </Button>
+          <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif">
+            Wir möchten betonen, dass unsere Website nicht auf den Verkauf ausgerichtet ist. Vielmehr legen wir den Fokus auf Kundenservice, Informationen und Qualitätssicherung.
+          </p>
+          <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif mt-12">
+            In Bezug auf den DO IT SHOP gemäß unserer Gewerbeerlaubnis dürfen wir Möbel, Kunstgegenstände und Bilder feilbieten.
+          </p>
+
+          <div className="pt-12 pb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-widest text-primary">Muhajir Haron</h2>
           </div>
-        </div>
-      </section>
 
-      {/* Services Grid */}
-      <section id="services" className="py-24 px-4 border-t border-secondary/20 relative">
-        <IslamicPattern className="opacity-[0.02]" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-            <ServiceCard
-              title={t.services.do_it.title}
-              description={t.services.do_it.desc}
-            />
-            <ServiceCard
-              title={t.services.cut_it.title}
-              description={t.services.cut_it.desc}
-              href="#products"
-            />
-            <ServiceCard
-              title={t.services.hang_it.title}
-              description={t.services.hang_it.desc}
-              href="#products"
-            />
-            <ServiceCard
-              title={t.services.collab.title}
-              description={t.services.collab.desc}
-              href="#products"
-            />
-          </div>
-        </div>
-      </section>
+          <p className="text-lg md:text-xl leading-relaxed font-light text-muted-foreground italic font-serif">
+            Im traditionellen Reisegewerbe gemäß § 55 GewO akquiriere ich meine Kundschaft aus eigener Initiative. Diese Internetpräsenz dient ausschließlich der Imagepflege und informiert begleitend über die Besonderheiten des Reisegewerbes.
+          </p>
+        </section>
 
-      {/* Process Section */}
-      <section className="py-24 px-4 bg-primary text-primary-foreground overflow-hidden relative">
-        <IslamicPattern className="opacity-10 text-secondary" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold uppercase tracking-tight mb-20 text-center text-secondary">
-            {t.process.title}
-          </h2>
-
-          <div className="relative">
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-secondary/30 -translate-y-1/2"></div>
-
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 relative z-10">
-              {t.process.steps.map((step, index) => {
-                const Icon = processIcons[index % processIcons.length];
-                return (
-                  <div key={index} className="flex flex-col items-center text-center space-y-6 group">
-                    <div className="w-20 h-20 bg-background border-2 border-secondary flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-45 relative">
-                      <div className="absolute inset-1 border border-secondary/20 pointer-events-none" />
-                      <Icon className="w-8 h-8 text-primary group-hover:-rotate-45 transition-transform duration-500" />
-                    </div>
-                    <div className="font-heading uppercase text-sm tracking-widest text-secondary font-bold">{step}</div>
-                  </div>
-                )
-              })}
+        {/* 3 Images Section border-t border-secondary/20 pt-24 */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pt-16 mt-16">
+          {/* DESIGN SPACE */}
+          <div className="group space-y-6">
+            <div className="relative aspect-[4/5] overflow-hidden bg-muted/20">
+              <Image
+                src="/images/sketches/sketch-1.PNG"
+                alt="Design Space"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio/Products */}
-      <section id="products" className="py-24 px-4 bg-background relative">
-        <div className="max-w-7xl mx-auto space-y-16 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-muted pb-8">
-            <h2 className="text-4xl md:text-6xl font-heading font-bold uppercase tracking-tight text-foreground">
-              Selected Work
-            </h2>
+            <h3 className="text-center font-heading font-bold uppercase tracking-[0.2em] text-lg text-primary">
+              Design Space
+            </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <CarouselProjectCard
-              title="Concept Sketches"
-              category="Design & Process"
-              images={[
-                "/images/sketches/sketch-1.PNG",
-                "/images/sketches/sketch-2.PNG",
-                "/images/sketches/sketch-3.PNG",
-                "/images/sketches/sketch-4.PNG",
-              ]}
-            />
-            <CarouselProjectCard
-              title="Modern Wardrobe"
-              category="Custom Furniture Kufic Design"
-              images={[
-                "/images/wardrobe/muhajir-cabinet-2.PNG",
-                "/images/wardrobe/wardrobe-book-cabinet-3.jpg",
-              ]}
-            />
-            <CarouselProjectCard
-              title="Creative Designed Objects"
-              category="Moodboards"
-              images={[
-                "/images/creative-objects/moodboard-1.PNG",
-                "/images/creative-objects/moodboard-2.PNG",
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-      {/* Feedback Section */}
-      <section className="py-24 px-4 bg-muted/20 relative">
-        <IslamicPattern className="opacity-[0.02]" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <FeedbackForm />
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="contact" className="py-16 border-t border-secondary/20 px-4 bg-muted/30 relative overflow-hidden">
-        <IslamicPattern className="opacity-[0.02]" />
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
-          <div className="text-center md:text-left">
-            <div className="font-heading font-bold text-2xl uppercase tracking-tight text-primary">
-              DO IT CARPENTRY
+          {/* DESIGN OBJECT */}
+          <div id="products" className="group space-y-6 flex flex-col justify-end">
+            <div className="relative aspect-[4/5] overflow-hidden bg-muted/20">
+              <Image
+                src="/images/wardrobe/muhajir-cabinet-2.PNG"
+                alt="Design Object"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
-            <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wide font-sans">
-              © {new Date().getFullYear()} {t.footer.rights}
+            <h3 className="text-center font-heading font-bold uppercase tracking-[0.2em] text-lg text-primary">
+              Design Object
+            </h3>
+          </div>
+
+          {/* COLLABORATE */}
+          <div className="group space-y-6 flex flex-col justify-end">
+            <div className="relative aspect-[4/5] overflow-hidden bg-muted/20">
+              <Image
+                src="/images/creative-objects/moodboard-1.PNG"
+                alt="Collaborate"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-center font-heading font-bold uppercase tracking-[0.2em] text-lg text-primary">
+              Collaborate
+            </h3>
+          </div>
+        </section>
+
+        {/* Dynamic Design Space Backend Content */}
+        <div id="design-space" className="pt-24 space-y-12 scroll-mt-24">
+          <div className="space-y-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-widest text-primary">Design Space</h2>
+            <div className="w-12 h-1 bg-secondary mx-auto"></div>
+          </div>
+          <DesignSpaceContents />
+        </div>
+
+        {/* Dynamic Design Object Backend Content */}
+        <div id="design-objects" className="pt-24 space-y-12 scroll-mt-24">
+          <div className="space-y-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-widest text-primary">Design Objects</h2>
+            <div className="w-12 h-1 bg-secondary mx-auto"></div>
+          </div>
+          <DesignObjectsContents />
+        </div>
+
+        {/* Collaborate Text Section */}
+        <section id="collaborate" className="max-w-3xl mx-auto space-y-12 py-24 border-t border-secondary/10 scroll-mt-24">
+          <div className="space-y-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-widest text-primary">Collaborate</h2>
+            <div className="w-12 h-1 bg-secondary mx-auto"></div>
+          </div>
+
+          <div className="space-y-8 text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif text-center md:text-left">
+            <p>
+              At Raumwerk-Harun we believe in the power of collaboration to foster creativity and community. We are eager to build strong relationships with fellow artists to share our skills and experiences.
+            </p>
+            <p>
+              By combining our skills and ideas, we can create unique, high-quality pieces that inspire and delight.
+            </p>
+            <p>
+              Our goal is to create a supportive platform where artisans can work together with me and expand. By collaborating, we can not only generate inspiring, high-quality creations but also help one another commercially by promoting and supporting each other's ventures.
+            </p>
+            <p className="font-medium text-primary pt-4 uppercase tracking-widest text-base font-heading">
+              Join us in this journey to cultivate creativity, community, and mutual growth!
             </p>
           </div>
-          <div className="flex gap-8">
-            <Link href="https://www.instagram.com/honey_frames_furniture?igsh=eXV6ZnQwOWJlMHV6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-secondary transition-colors font-heading">
-              <Instagram className="w-4 h-4" />
-              Instagram
-            </Link>
-            <Link href="#" className="text-sm font-bold uppercase tracking-widest hover:text-secondary transition-colors font-heading">
-              Email
-            </Link>
-          </div>
-        </div>
-      </footer>
+        </section>
+
+        {/* Contact Section */}
+        <ContactForm />
+      </main>
     </div>
   )
 }

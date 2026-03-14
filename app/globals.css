@@ -7,7 +7,7 @@
   --font-size: 16px;
 
   /* Islamic/Kufic Palette */
-  --background: #F9F7F2;
+  --background: #FFFFFF;
   /* Cream/Parchment */
   --foreground: #1A1A1A;
   /* Dark Gray for contrast */
@@ -77,9 +77,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-inter);
+  --font-sans: "Bahnschrift Light SemiCondensed", "Bahnschrift", var(--font-inter), sans-serif;
   --font-serif: var(--font-garamond);
-  --font-heading: var(--font-playfair);
+  --font-heading: "Bahnschrift Light SemiCondensed", "Bahnschrift", var(--font-playfair), sans-serif;
   --font-kufi: var(--font-reem-kufi);
   --font-arabic: var(--font-amiri);
 

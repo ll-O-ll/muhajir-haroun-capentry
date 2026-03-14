@@ -30,3 +30,8 @@ next-env.d.ts
 
 # large assets
 resources/
+
+/lib/generated/prisma
+/prisma/generated-client/
+/prisma/generated-client-v5/
+/prisma/generated-client-v4/

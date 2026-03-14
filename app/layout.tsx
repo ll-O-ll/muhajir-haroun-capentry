@@ -56,6 +56,19 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Analytics />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker.getRegistrations().then(registrations => {
+                    for (let registration of registrations) {
+                      registration.unregister();
+                    }
+                  });
+                }
+              `,
+            }}
+          />
         </LanguageProvider>
       </body>
     </html>
