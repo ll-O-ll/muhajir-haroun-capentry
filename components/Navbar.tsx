@@ -38,7 +38,7 @@ export function Navbar() {
                     <Link href="/" className="flex items-center group shrink-0 mr-4">
                         <div className="relative w-[200px] h-14 sm:w-[260px] sm:h-16 md:w-[320px] md:h-16 lg:w-[400px] lg:h-20 xl:w-[480px] transition-transform origin-left group-hover:scale-105">
                             <Image
-                                src="/images/harun-logo.PNG"
+                                src="/images/harun-logo.png"
                                 alt="Muhajir Haroun Logo"
                                 fill
                                 priority
