@@ -91,24 +91,24 @@ export default function DesignSpaceContents() {
     return (
         <div className="space-y-12">
             {/* Tabs */}
-            <div className="flex justify-center space-x-8 border-b border-primary/10 pb-4">
+            <div className="flex justify-center space-x-4 sm:space-x-8 border-b border-primary/10 pb-4 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
                 <button
                     onClick={() => setActiveTab("statement")}
-                    className={`font-heading uppercase tracking-widest text-sm transition-colors ${activeTab === "statement" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
+                    className={`font-heading uppercase tracking-widest text-xs sm:text-sm transition-colors whitespace-nowrap ${activeTab === "statement" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
                         }`}
                 >
                     1 - Design Statement
                 </button>
                 <button
                     onClick={() => setActiveTab("projects")}
-                    className={`font-heading uppercase tracking-widest text-sm transition-colors ${activeTab === "projects" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
+                    className={`font-heading uppercase tracking-widest text-xs sm:text-sm transition-colors whitespace-nowrap ${activeTab === "projects" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
                         }`}
                 >
                     2 - Projects
                 </button>
                 <button
                     onClick={() => setActiveTab("procedure")}
-                    className={`font-heading uppercase tracking-widest text-sm transition-colors ${activeTab === "procedure" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
+                    className={`font-heading uppercase tracking-widest text-xs sm:text-sm transition-colors whitespace-nowrap ${activeTab === "procedure" ? "text-primary border-b-2 border-primary pb-4 -mb-4.5" : "text-muted-foreground hover:text-primary"
                         }`}
                 >
                     3 - Procedure

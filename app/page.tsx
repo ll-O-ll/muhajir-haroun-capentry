@@ -20,9 +20,6 @@ export default function LandingPage() {
           <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif">
             Wir möchten betonen, dass unsere Website nicht auf den Verkauf ausgerichtet ist. Vielmehr legen wir den Fokus auf Kundenservice, Informationen und Qualitätssicherung.
           </p>
-          <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif mt-12">
-            In Bezug auf den DO IT SHOP gemäß unserer Gewerbeerlaubnis dürfen wir Möbel, Kunstgegenstände und Bilder feilbieten.
-          </p>
 
           <div className="pt-12 pb-4">
             <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-widest text-primary">Muhajir Haron</h2>
@@ -54,7 +51,7 @@ export default function LandingPage() {
           <div id="products" className="group space-y-6 flex flex-col justify-end">
             <div className="relative aspect-[4/5] overflow-hidden bg-muted/20">
               <Image
-                src="/images/wardrobe/muhajir-cabinet-2.PNG"
+                src="/images/creative-objects/moodboard-2.PNG"
                 alt="Design Object"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -108,16 +105,21 @@ export default function LandingPage() {
 
           <div className="space-y-8 text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-serif text-center md:text-left">
             <p>
-              At Raumwerk-Harun we believe in the power of collaboration to foster creativity and community. We are eager to build strong relationships with fellow artists to share our skills and experiences.
+              At Raumwerk-Haron we believe in the power of collaboration to foster creativity and community. We are eager to build strong relationships with fellow artists to share our skills and experiences.
             </p>
             <p>
               By combining our skills and ideas, we can create unique, high-quality pieces that inspire and delight.
             </p>
             <p>
-              Our goal is to create a supportive platform where artisans can work together with me and expand. By collaborating, we can not only generate inspiring, high-quality creations but also help one another commercially by promoting and supporting each other's ventures.
+              Our goal is to create a supportive platform where artisans can work together with me and expand. By collaborating, we can not only generate inspiring, high-quality creations but also help one another commercially by promoting and supporting each other&apos;s ventures.
             </p>
             <p className="font-medium text-primary pt-4 uppercase tracking-widest text-base font-heading">
               Join us in this journey to cultivate creativity, community, and mutual growth!
+            </p>
+            <p className="pt-2">
+              <a href="mailto:info@raumwerkharon.de" className="text-base font-heading uppercase tracking-widest text-secondary hover:text-primary transition-colors not-italic">
+                Email us: info@raumwerkharon.de
+              </a>
             </p>
           </div>
         </section>

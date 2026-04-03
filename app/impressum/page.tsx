@@ -29,35 +29,35 @@ export default function ImpressumPage() {
                     <section className="space-y-6 not-italic">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-primary/10 pt-8">
                             <div>
-                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Unternehmen</h3>
+                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Name des Unternehmens</h3>
                                 <p className="font-medium">Tischer und Raumgestaltung im Reisegewerbe</p>
+                            </div>
+                            <div>
+                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Webseite</h3>
+                                <p className="font-medium">www.raumwerkharon.de</p>
                             </div>
                             <div>
                                 <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Inhaber</h3>
                                 <p className="font-medium">Muhajir Haron</p>
                             </div>
                             <div>
-                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Email</h3>
-                                <p className="font-medium">haron@raumwerk-harun.com</p>
+                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">E-Mail</h3>
+                                <p className="font-medium">info@raumwerkharon.de</p>
                             </div>
                             <div>
                                 <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Telefon</h3>
-                                <p className="font-medium">+49...</p>
+                                <p className="font-medium">+49 157 5199 73 23</p>
                             </div>
                             <div>
                                 <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">USt-IdNr.</h3>
-                                <p className="font-medium">Nachträglich</p>
-                            </div>
-                            <div>
-                                <h3 className="font-heading uppercase tracking-widest text-[10px] text-muted-foreground mb-2">Webseite</h3>
-                                <p className="font-medium">www.raumwerkharun.com</p>
+                                <p className="font-medium">DE460284621</p>
                             </div>
                         </div>
                     </section>
 
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-primary/10 pt-12">
                         <div>
-                            <h3 className="font-heading uppercase tracking-widest text-xs text-primary mb-4 not-italic font-bold">Privat Wohnung</h3>
+                            <h3 className="font-heading uppercase tracking-widest text-xs text-primary mb-4 not-italic font-bold">Adresse (Privat Wohnung)</h3>
                             <p className="not-italic">
                                 Karl-Liebknecht-Straße 45<br />
                                 14482 Potsdam
@@ -71,6 +71,18 @@ export default function ImpressumPage() {
                                 Deutschland
                             </p>
                         </div>
+                    </section>
+
+                    <section className="border-t border-primary/10 pt-12 not-italic">
+                        <p className="text-base text-foreground/70 font-serif italic">
+                            Für detaillierte Informationen zu den rechtlichen Aspekten verweisen wir auf die folgende Rubrik:
+                        </p>
+                        <Link
+                            href="/legal-notice"
+                            className="inline-flex items-center mt-4 font-heading uppercase tracking-widest text-sm text-primary hover:text-secondary transition-colors font-bold not-italic"
+                        >
+                            Rechtshinweise →
+                        </Link>
                     </section>
                 </div>
 
