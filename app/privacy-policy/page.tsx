@@ -95,6 +95,50 @@ export default function PrivacyPolicyPage() {
                                 Wir widersprechen der Nutzung der im Impressum veröffentlichten Kontaktdaten für unaufgeorderte Werbung. Bei unerwünschten Werbeinformationen behalten wir uns rechtliche Schritte vor.
                             </p>
                         </div>
+
+                        {/* Reisegewerbe Section */}
+                        <div className="space-y-8 pt-8 border-t border-gray-100">
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-primary">
+                                Was ist Reisegewerbe?
+                            </h2>
+
+                            <div className="space-y-6 text-base text-gray-600 font-serif leading-relaxed">
+                                <p>
+                                    Das Reisegewerbe stellt eine spezielle Form der gewerblichen Tätigkeit dar, für die eine besondere Erlaubnis erforderlich ist und die gesetzlich geregelt ist. In diesem Bereich können vielfältige Tätigkeiten ausgeübt werden, von Warenverkäufen bis hin zu Dienstleistungen.
+                                </p>
+                                <p>
+                                    Ein häufiges Problem ist, dass Reisegewerbetreibende von Ordnungsämtern oder Handwerkskammern kontrolliert und manchmal wegen der Ausführung meisterpflichtiger Arbeiten angeklagt werden, obwohl sie der Gewerbeordnung (GewO) und nicht der Handwerksordnung (HwO) unterliegen. Vorteilhaft ist, dass Reisegewerbetreibende gemäß § 55 GewO alle handwerklichen Tätigkeiten ausüben dürfen, sofern diese in ihrer Reisegewerbekarte vermerkt sind.
+                                </p>
+                                <p>
+                                    Die wesentliche gesetzliche Anforderung ist, dass die Initiative zur Leistungserbringung vom Anbieter ausgehen muss. Das Bundesverfassungsgericht hat klargestellt, dass der Hauptunterschied zwischen Reisegewerbe und stehenden Gewerben in der Interaktion liegt: Der Reisegewerbetreibende sucht den Kunden auf, während beim stehenden Gewerbe der Kunde zum Handwerker kommt.
+                                </p>
+                                <p>
+                                    Ein weiteres Urteil (OLG Frankfurt am Main – Az. 6 U 178/08) bestätigt die Legitimität unserer Website.
+                                </p>
+                                <p>
+                                    Für uns ist das Reisegewerbe nicht nur eine Möglichkeit, sondern eine Hommage an die alte Handwerkskunst, die auf der grundgesetzlich garantierten Berufsausübungsfreiheit (Art. 12 Abs. 1 GG) basiert. Das Reisegewerbe wird in Teil III der Gewerbeordnung, insbesondere in § 55, definiert:
+                                </p>
+
+                                <blockquote className="border-l-4 border-secondary/30 pl-6 py-4 bg-muted/20 rounded-r-lg italic text-foreground/70">
+                                    Ein Reisegewerbe betreibt, wer gewerbsmäßig ohne vorhergehende Bestellung außerhalb seiner gewerblichen Niederlassung (§ 42 Abs. 2) oder ohne eine solche zu haben 1. selbständig oder unselbständig in eigener Person Waren feilbietet oder Bestellungen aufsucht (vertreibt) oder ankauft, Leistungen anbietet oder Bestellungen auf Leistungen aufsucht oder 2. selbständig unterhaltende Tätigkeiten als Schausteller oder nach Schaustellerart ausübt.
+                                </blockquote>
+
+                                <p>
+                                    Die Beschränkungen handwerklicher Berufsausübung durch den Meisterzwang bestehen nach der Handwerksordnung nur für das so genannte &quot;stehende Gewerbe&quot; – nicht für das Reisegewerbe.
+                                </p>
+                                <p>
+                                    In §1 HwO heißt es:
+                                </p>
+
+                                <blockquote className="border-l-4 border-secondary/30 pl-6 py-4 bg-muted/20 rounded-r-lg italic text-foreground/70">
+                                    &bdquo;(1) Der selbstständige Betrieb eines zulassungspflichtigen Handwerks als stehendes Gewerbe ist nur den in der Handwerksrolle eingetragenen natürlichen und juristischen Personen und Personengesellschaften gestattet.&ldquo;
+                                </blockquote>
+
+                                <p>
+                                    Da die Tätigkeit im Reisegewerbe nicht in die Handwerksrolle eingetragen wird, ist sie vom Meisterzwang nicht betroffen.
+                                </p>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </main>
