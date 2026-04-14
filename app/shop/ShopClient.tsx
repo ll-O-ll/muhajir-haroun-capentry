@@ -16,11 +16,15 @@ export default function ShopClient({ products }: { products: any[] }) {
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 max-w-7xl mx-auto">
             {/* --- SHOP HEADER --- */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-8">
-                <div>
-                    <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-primary flex items-center gap-4">
-                        DO IT <span className="text-gray-200 text-3xl md:text-5xl font-light tracking-widest uppercase">Products</span>
-                    </h1>
+            <div className="flex flex-col mb-12 border-b border-gray-100 pb-8">
+                <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-primary flex items-center gap-4 mb-4">
+                    DO IT <span className="text-gray-200 text-3xl md:text-5xl font-light tracking-widest uppercase">Products</span>
+                </h1>
+                <div className="inline-block bg-secondary/10 text-secondary border border-secondary/20 px-4 py-2 rounded-md self-start">
+                    <p className="text-xs md:text-sm font-semibold tracking-wider uppercase flex items-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary mr-2 animate-pulse"></span>
+                        Items strictly for display (Not for sale)
+                    </p>
                 </div>
             </div>
 
